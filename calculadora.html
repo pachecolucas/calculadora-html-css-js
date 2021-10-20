@@ -1,0 +1,50 @@
+<style>
+  h1,
+  h2,
+  div {
+    text-align: center;
+    font-family: arial;
+  }
+
+  h1 {
+    color: green;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 100px;
+  }
+
+  button {
+    text-transform: uppercase;
+    padding: 20px 40px;
+    cursor: pointer;
+  }
+</style>
+
+<h1>Calculadora</h1>
+<h2>0</h2>
+<div>
+  <button>menos</button>
+  <button onclick="somar()">mais</button>
+</div>
+
+<script>
+  function somar() { // ASSINATURA DA FUNÇÃO (chamo)
+    // CORPO DA FUNÇÃO (faz)
+
+    // Passo 1: Pegar o número
+    const h2 = document.querySelector("h2")
+    var numero = parseInt(h2.innerText)
+    console.log("passo 1: ", numero)
+
+    // Passo 2: Incrementar o número (somar + 1)
+    numero = numero + 1
+    console.log("passo 2: ", numero)
+
+    // Passo 3: Atualizar o valor na tela
+    h2.innerText = numero
+
+
+  }
+</script>
