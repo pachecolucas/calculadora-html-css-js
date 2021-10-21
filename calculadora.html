@@ -25,7 +25,7 @@
 <h1>Calculadora</h1>
 <h2>0</h2>
 <div>
-  <button>menos</button>
+  <button onclick="diminuir()">menos</button>
   <button onclick="somar()">mais</button>
 </div>
 
@@ -40,6 +40,25 @@
 
     // Passo 2: Incrementar o número (somar + 1)
     numero = numero + 1
+    console.log("passo 2: ", numero)
+
+    // Passo 3: Atualizar o valor na tela
+    h2.innerText = numero
+
+  }
+
+  function diminuir(){
+     // assinatura da função ( chamo )
+     //corpo da função (faz)
+
+     // Passo 1 pegar numero 
+     const h2 = document.querySelector("h2")
+    var numero = parseInt(h2.innerText)
+    console.log("passo 1: ", numero)
+
+
+    // Passo 2: subitrair  o número (diminuir - 1)
+    numero = numero - 1
     console.log("passo 2: ", numero)
 
     // Passo 3: Atualizar o valor na tela
